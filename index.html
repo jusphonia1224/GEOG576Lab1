@@ -29,13 +29,10 @@
           container: "viewDiv" // Div element
         });
 
-        // Create the HTML div element programmatically at runtime and set to the widget's container
-        const basemapGallery = new BasemapGallery({
-          view: view,
-          container: document.createElement("div")
+        let basemapGallery = new BasemapGallery({
+          view: view
         });
-
-        // Add the widget to the top-right corner of the view
+        // Add widget to the top right corner of the view
         view.ui.add(basemapGallery, {
           position: "top-right"
         });
@@ -57,6 +54,5 @@
 <body>
   <!-- div to display map -->
   <div id="viewDiv"></div> 
-  <div id="basemapGalleryDiv"></div>
 </body>
 </html>
