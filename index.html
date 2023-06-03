@@ -24,7 +24,7 @@
         
         const view = new MapView({
           map: map,
-          center: [114.1758368, 22.2906788], // Longitude, latitude of Hong Kong
+          center: [114.0389336, 22.2898183], // Longitude, latitude of Hong Kong
           zoom: 12, // Zoom level
           container: "viewDiv" // Div element
         });
@@ -32,6 +32,7 @@
         let basemapGallery = new BasemapGallery({
           view: view
         });
+
         // Add widget to the top right corner of the view
         view.ui.add(basemapGallery, {
           position: "top-right"
