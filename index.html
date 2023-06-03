@@ -25,8 +25,19 @@
         const view = new MapView({
           map: map,
           center: [114.1758368, 22.2906788], // Longitude, latitude of Hong Kong
-          zoom: 11, // Zoom level
+          zoom: 12, // Zoom level
           container: "viewDiv" // Div element
+        });
+
+        // Create the HTML div element programmatically at runtime and set to the widget's container
+        const basemapGallery = new BasemapGallery({
+          view: view,
+          container: document.createElement("div")
+        });
+
+        // Add the widget to the top-right corner of the view
+        view.ui.add(basemapGallery, {
+          position: "top-right"
         });
     });  
    </script>
@@ -46,5 +57,6 @@
 <body>
   <!-- div to display map -->
   <div id="viewDiv"></div> 
+  <div id="basemapGalleryDiv"></div>
 </body>
 </html>
