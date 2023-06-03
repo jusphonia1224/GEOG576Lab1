@@ -19,7 +19,7 @@
       ], function(esriConfig, Map, MapView) {   
         esriConfig.apiKey = "AAPK1bafb1fd1b984000a2a5ab965ed0cf111GDugMmnipDNIQH9yaN93addT3iTZzAKwGLSLBZvZJBkFTaRPkJjvEi2gCoqyJml";
         const map = new Map({ 
-          basemap: "topo-vector" // Basemap layer service 
+          basemap: "arcgis-modern-antique" // Basemap layer service 
         });  
         
         const view = new MapView({
@@ -28,17 +28,7 @@
           zoom: 12, // Zoom level
           container: "viewDiv" // Div element
         });
-
-        // Basemap Gallery
-        const basemapGallery = new BasemapGallery({
-          view: view
-        });
-
-        // Add the widget to the top-right corner of the view
-        view.ui.add(basemapGallery, {
-          position: "top-right"
-        });
-
+        
         // Locate button
         const locateBtn = new Locate({
           view: view
@@ -57,6 +47,16 @@
         view.ui.add(searchWidget, {
           position: "top-left",
           index: 2
+        });
+
+        // Basemap Gallery
+        const basemapGallery = new BasemapGallery({
+          view: view
+        });
+
+        // Add the widget to the top-right corner of the view
+        view.ui.add(basemapGallery, {
+          position: "top-right"
         });
     }); 
   </script>
