@@ -29,16 +29,6 @@
           container: "viewDiv" // Div element
         });
 
-        // Basemap Gallery
-        const basemapGallery = new BasemapGallery({
-          view: view
-        });
-
-        // Add the widget to the top-right corner of the view
-        view.ui.add(basemapGallery, {
-          position: "top-right"
-        });
-
         // Locate button
         const locateBtn = new Locate({
           view: view
@@ -48,8 +38,8 @@
         view.ui.add(locateBtn, {
           position: "top-left"
         });
-    });  
-   </script>
+    }); 
+  </script>
 
   <!-- CSS for full screen-->
   <style> 
