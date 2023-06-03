@@ -35,7 +35,8 @@
 
         // Basemap Gallery
         const basemapGallery = new BasemapGallery({
-          view: view
+          view: view,
+          source: [Basemap.fromId("topo-vector"), Basemap.fromId("hybrid"), Basemap.fromId("arcgis-imagery")]
         });
 
         // Add the widget to the top-right corner of the view
