@@ -15,24 +15,25 @@
     require([
       "esri/config", 
       "esri/Map", 
-      "esri/views/SceneView",
+      "esri/views/MapView",
       "esri/widgets/BasemapGallery", 
       "esri/widgets/Locate",
       "esri/widgets/Search",
       "esri/portal/Portal"
-      ], function(esriConfig, Map, SceneView, BasemapGallery, Locate, Search, Portal) {   
+      ], function(esriConfig, Map, MapView, BasemapGallery, Locate, Search, Portal) {   
         esriConfig.apiKey = "AAPK1bafb1fd1b984000a2a5ab965ed0cf111GDugMmnipDNIQH9yaN93addT3iTZzAKwGLSLBZvZJBkFTaRPkJjvEi2gCoqyJml";
 
         const map = new Map({ 
           basemap: "arcgis-imagery" // Basemap layer service 
         });  
         
-        const view = new SceneView({
+        const view = new MapView({
           map: map,
           center: [114.074134, 22.271002], // Longitude, latitude of Hong Kong
           zoom: 12, // Zoom level
           container: "viewDiv" // Div element
         });
+
        
         // Locate button
         const locateBtn = new Locate({
