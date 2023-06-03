@@ -15,7 +15,7 @@
     require([
       "esri/config", 
       "esri/Map", 
-      "esri/views/MapView",
+      "esri/views/SceneView",
       "esri/widgets/BasemapGallery", 
       "esri/widgets/Locate",
       "esri/widgets/Search",
@@ -27,7 +27,7 @@
           basemap: "arcgis-imagery" // Basemap layer service 
         });  
         
-        const view = new MapView({
+        const view = new SceneView({
           map: map,
           center: [114.074134, 22.271002], // Longitude, latitude of Hong Kong
           zoom: 12, // Zoom level
