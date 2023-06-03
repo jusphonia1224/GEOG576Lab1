@@ -33,18 +33,7 @@
           zoom: 12, // Zoom level
           container: "viewDiv" // Div element
         });
-
-        // Basemap Gallery
-        const basemapGallery = new BasemapGallery({
-          view: view,
-          source: [basemap.fromId("arcgis-imagery"), basemap.fromId("hybrid")] // autocasts to LocalBasemapsSource
-        });
-
-        // Add the widget to the top-right corner of the view
-        view.ui.add(basemapGallery, {
-          position: "top-left"
-        });
-
+       
         // Locate button
         const locateBtn = new Locate({
           view: view
@@ -64,6 +53,17 @@
           position: "top-right",
           index: 2
         });
+
+        // Basemap Gallery
+        const basemapGallery = new BasemapGallery({
+          view: view
+        });
+
+        // Add the widget to the top-right corner of the view
+        view.ui.add(basemapGallery, {
+          position: "top-left"
+        });
+
     }); 
   </script>
 
