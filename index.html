@@ -19,7 +19,7 @@
       "esri/widgets/BasemapGallery", 
       "esri/widgets/Locate",
       "esri/widgets/Search"
-      ], function(esriConfig, Map, MapView) {   
+      ], function(esriConfig, Map, MapView, BasemapGallery, Locate, Search) {   
         esriConfig.apiKey = "AAPK1bafb1fd1b984000a2a5ab965ed0cf111GDugMmnipDNIQH9yaN93addT3iTZzAKwGLSLBZvZJBkFTaRPkJjvEi2gCoqyJml";
 
         const map = new Map({ 
@@ -53,7 +53,7 @@
           position: "top-left"
         });
 
-        let searchWidget = new Search({
+        const searchWidget = new Search({
           view: view
         });
 
