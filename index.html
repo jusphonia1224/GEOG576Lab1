@@ -15,10 +15,11 @@
     require([
       "esri/config", 
       "esri/Map", 
-      "esri/views/MapView"
+      "esri/views/MapView",
+      "esri/widgets"
       ], function(esriConfig, Map, MapView) {   
         esriConfig.apiKey = "AAPK1bafb1fd1b984000a2a5ab965ed0cf111GDugMmnipDNIQH9yaN93addT3iTZzAKwGLSLBZvZJBkFTaRPkJjvEi2gCoqyJml";
-        
+
         const map = new Map({ 
           basemap: "arcgis-imagery" // Basemap layer service 
         });  
